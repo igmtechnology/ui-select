@@ -547,6 +547,9 @@ uis.controller('uiSelectCtrl',
             return false;
           }
           var inputWidth = containerWidth - input.offsetLeft;
+          if (ctrl.multiple) {
+            inputWidth -= 10;
+          }
           if (inputWidth < 50) inputWidth = containerWidth;
           ctrl.searchInput.css('width', inputWidth+'px');
           return true;
