@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2019-10-02T15:14:14.341Z
+ * Version: 0.19.8 - 2019-10-02T17:13:36.399Z
  * License: MIT
  */
 
@@ -991,7 +991,7 @@ uis.controller('uiSelectCtrl',
           stashArr.some(function (origItem) {
             return angular.equals(origItem, newItem);
           }) ||
-          (ctrl.selected && ctrl.selected.some(function (origItem) {
+          (ctrl.selected && angular.isArray(ctrl.selected) && ctrl.selected.some(function (origItem) {
             return angular.equals(origItem, newItem);
           }))
         ) {

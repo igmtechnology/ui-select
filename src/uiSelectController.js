@@ -714,7 +714,7 @@ uis.controller('uiSelectCtrl',
           stashArr.some(function (origItem) {
             return angular.equals(origItem, newItem);
           }) ||
-          (ctrl.selected && ctrl.selected.some(function (origItem) {
+          (ctrl.selected && angular.isArray(ctrl.selected) && ctrl.selected.some(function (origItem) {
             return angular.equals(origItem, newItem);
           }))
         ) {
